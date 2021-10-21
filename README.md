@@ -1,6 +1,6 @@
 # Liferay Test Automation
 ## Description
-This git project is a selenium example for test automation of Liferay instances.
+This git project is a selenium example for test automation of Liferay customizations.
 
 ## How to run automation?
 
@@ -54,4 +54,4 @@ After test execution, a basic HTML report is automatically generated in ./target
 > ./gradlew :cleanTest :test -Durl=http://localhost:9080/
 
 ## Contact
-If you have any further question, just email me to david.gutierrez@liferay.com
+If you have any further question, just email us to magdalena.jedraszak@liferay.com or david.gutierrez@liferay.com 
