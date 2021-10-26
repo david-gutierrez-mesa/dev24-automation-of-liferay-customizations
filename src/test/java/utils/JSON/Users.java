@@ -77,6 +77,7 @@ public class Users {
         disablePasswordChangeRequired(companyId);
 
         String userId = getUserIdByEmailAddress(user.getEmail());
+
         agreeToTermsAndAnswerReminderQuery(userId);
     }
 
@@ -91,9 +92,9 @@ public class Users {
     public static void deleteUserByUserId(String userId) throws IOException, TimeoutException {
         String baseUrl = getPortalURL();
 
-        String curl = String.format("%sapi/jsonws/user/delete-user -u %s:%s -d userId=%s", baseUrl, ADMIN_USER_EMAIL, ADMIN_USER_PASSWORD, userId);
+        String curl = String.format("%so/headless-admin-user/v1.0/user-accounts/%s -u %s:%s", baseUrl,  userId, ADMIN_USER_EMAIL, ADMIN_USER_PASSWORD);
 
-        JSONCurlUtil.post(curl);
+        JSONCurlUtil.delete(curl);
 
     }
 
